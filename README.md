@@ -1,4 +1,4 @@
-# Fancy Tools
+# Fancy Tools klis & Emilie
 
 ## Description
 Ensemble de scripts Shell pour automatiser la configuration d'un environnement
