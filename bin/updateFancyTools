@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+
+SRC_DIR=~/src/fancy_tools
+
+# Se positionner dans le dépôt
+cd "$SRC_DIR"
+
+# Vérifier qu'on est sur la branche main
+branch=$(git rev-parse --abbrev-ref HEAD)
+if [ "$branch" != "main" ]; then
+    echo "Erreur : vous n'etes pas sur la branche main (branche actuelle : $branch)"
+    exit 1
+fi
+
+# Mettre à jour
+git pull
+echo "Depot mis a jour"
+
+# Copier le script vers ~/bin
+mkdir -p ~/bin
+cp "$SRC_DIR/bin/updateFancyTools" ~/bin/updateFancyTools
+chmod +x ~/bin/updateFancyTools
+echo "updateFancyTools mis a jour dans ~/bin"
