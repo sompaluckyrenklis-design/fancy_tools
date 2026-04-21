@@ -5,6 +5,7 @@ Ensemble de scripts Shell pour automatiser la configuration d'un environnement
 de développement Git sur Ubuntu/Debian.
 
 ## Prérequis
+- virtualBox oracle
 - OS : Ubuntu / Debian
 - Git installé (`sudo apt install git`)
 - Bash ou Zsh
